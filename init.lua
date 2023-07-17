@@ -6,9 +6,6 @@ vim.opt.autoindent = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.o.termguicolors = true
-vim.o.background = 'dark'
-vim.cmd[[colorscheme gruvbox]]
 
 vim.cmd 'filetype plugin indent on'
 vim.cmd 'syntax on'
@@ -19,6 +16,10 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 require('plugins')
 
 require('mason').setup()
+
+vim.o.termguicolors = true
+vim.o.background = 'dark'
+vim.cmd[[colorscheme gruvbox]]
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "c", "vim", "typescript", "vimdoc", "javascript", "json" },

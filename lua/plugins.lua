@@ -20,5 +20,9 @@ return require('packer').startup(function(use)
     'williamboman/mason.nvim',
     run = ':MasonUpdate' -- :MasonUpdate updates registry contents
   }
+
+  use {
+    'fatih/vim-go',
+  }
 end)
 
